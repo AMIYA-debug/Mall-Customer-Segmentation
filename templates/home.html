@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ASSIGN OFFERS</h1>
+        <form action="/predict" method="post">
+            <label for="income">Annual Income in k$:</label>
+            <input type="number" step="0.01" name="income" required><br>
+
+            <label for="spending">Spending Score from 1-100:</label>
+            <input type="number" step="0.01" name="spending" required><br>
+
+            <button type="submit">Predict Cluster</button>
+        </form>
+    </div>
+</body>
+</html>
